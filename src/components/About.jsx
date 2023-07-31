@@ -17,16 +17,19 @@ const About = () => {
     },
   ];
   return (
-    <section id="me" className="py-10 text-gray-300 ">
+    <section
+      id="me"
+      className="min-h-screen py-10 text-gray-300 flex items-center justify-center"
+    >
       <div className="text-center mt-8 ">
         <h3 className="text-4xl font-bold">
           My <span className="text-cyan-600">Life</span>
         </h3>
         <p className="text-gray-500 my-3 text-lg opacity-0">My Introduction</p>
         <div className="flex md:flex-row flex-col-reverse items center md:gap-6 gap-12 px-10 max-w-6xl mx-auto ">
-          <div className='p-2'>
+          <div className="p-2">
             <div className="text-gray-300 my-3 ">
-              <p className='text-justify leading-7 w-11/12 mx-auto'>
+              <p className="text-justify leading-7 w-11/12 mx-auto">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Numquam, tempore commodi! Minus cum iste nobis totam asperiores
                 blanditiis eos provident doloribus ducimus, sit numquam
@@ -38,7 +41,7 @@ const About = () => {
                     <h3 className="md:text-4xl text-2xl font-semibold text-white ">
                       {content.count}
                     </h3>
-                    <span className='md:text-base text-xs'>{content.text}</span>
+                    <span className="md:text-base text-xs">{content.text}</span>
                   </div>
                 ))}
               </div>{" "}
