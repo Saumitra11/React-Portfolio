@@ -3,12 +3,21 @@ import React, { useState, useEffect } from "react";
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const nameClick = () => {
+    const home = document.querySelector("#portal");
+    if (home) {
+      home.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const nav = document.querySelector("nav");
       window.scrollY > 0 ? setSticky(true) : setSticky(false);
     });
-  });
+  }, []);
+
   const menuLinks = [
     {
       name: "PORTAL",
@@ -31,15 +40,16 @@ const Navbar = () => {
       link: "#connect",
     },
   ];
+
   return (
     <nav
       className={`fixed w-full left-0 top-0 z-[999] ${
         sticky ? "bg-gray-900 text-white" : "text-white"
       }`}
     >
-      <div className="flex items-center justify-between ">
-        <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold ">
+      <div className="flex items-center justify-between">
+        <div className="mx-7" onClick={nameClick} style={{ cursor: "pointer" }}>
+          <h4 className="text-4xl uppercase font-bold">
             Sau<span className="text-cyan-600">mi</span>tra
           </h4>
         </div>

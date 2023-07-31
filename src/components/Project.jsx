@@ -9,9 +9,13 @@ import emotion from "../assets/images/motion.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination, Autoplay, Navigation } from "swiper/modules";
+
 const Project = () => {
   return (
-    <section id="works" className="min-h-screen py-10 text-gray-300 flex items-center justify-center">
+    <section
+      id="works"
+      className="min-h-screen py-10 text-gray-300 flex items-center justify-center"
+    >
       <div>
         <div className="text-center">
           <h3 className="text-4xl font-bold mt-10">
@@ -52,7 +56,6 @@ const Project = () => {
                   <h3 className="text-xl my-4">
                     Seamless Beta OS Enablement Solution
                   </h3>
-                  <div className="flex gap-3"></div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
@@ -61,14 +64,18 @@ const Project = () => {
                   <h3 className="text-xl my-4">UrbanHabitats</h3>
                   <div className="flex gap-3">
                     <a
-                      href=""
+                      href="https://github.com/Saumitra11/UrbanHabitatsFrontend"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Github
                     </a>
                     <a
-                      href=""
+                      href="https://urban-habitats-page.pages.dev/"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Live Demo
                     </a>
@@ -81,8 +88,10 @@ const Project = () => {
                   <h3 className="text-xl my-4">K Means Coloring</h3>
                   <div className="flex gap-3">
                     <a
-                      href=""
+                      href="https://github.com/Saumitra11/K-Dominant-Colors"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Github
                     </a>
@@ -95,8 +104,10 @@ const Project = () => {
                   <h3 className="text-xl my-4">PlayCave</h3>
                   <div className="flex gap-3">
                     <a
-                      href=""
+                      href="https://github.com/maurya-goyal10/playCave"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Github
                     </a>
@@ -109,8 +120,10 @@ const Project = () => {
                   <h3 className="text-xl my-4">Euro 2020 Knockout Analysis</h3>
                   <div className="flex gap-3">
                     <a
-                      href=""
+                      href="https://github.com/Saumitra11/Football-Game-Analysis"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Github
                     </a>
@@ -127,14 +140,18 @@ const Project = () => {
                   <h3 className="text-xl my-4">Emotion Detection</h3>
                   <div className="flex gap-3">
                     <a
-                      href=""
+                      href="https://github.com/Saumitra11/Emotion-Detector"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Github
                     </a>
                     <a
-                      href=""
+                      href="https://saumitra11.github.io/Emotion-Detector/"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       Live Demo
                     </a>

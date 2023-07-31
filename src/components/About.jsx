@@ -1,6 +1,6 @@
 import React from "react";
-import hpe from '../assets/images/hpe.png'
-import aws from '../assets/images/aws.png';
+import hpe from "../assets/images/hpe.png";
+import aws from "../assets/images/aws.png";
 const About = () => {
   const info = [
     {
@@ -30,10 +30,17 @@ const About = () => {
           <div className="p-2">
             <div className="text-gray-300 my-3 ">
               <p className="text-justify leading-7 w-11/12 mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Numquam, tempore commodi! Minus cum iste nobis totam asperiores
-                blanditiis eos provident doloribus ducimus, sit numquam
-                molestiae nemo commodi ab saepe quam?
+                I am Saumitra Pathak, a Computer Science and Engineering
+                undergrad from VIT Vellore. I
+                interned at <strong>Hewlett Packard Enterprise</strong> from
+                January 2023 to July 2023. I've worked with{" "}
+                <strong>React.js, Node.js, Express.js</strong> and{" "}
+                <strong>Python</strong>. I've also worked with{" "}
+                <strong>C++</strong> and I am an 
+                <strong> AWS Certified Cloud Practitioner</strong>. My main goal
+                in my career path is to learn and expand my knowledge domain. I
+                am very much interested in Football and Video Games and I love
+                travelling.
               </p>
               <div className="flex mt-10 items-center gap-7 ">
                 {info.map((content) => (
