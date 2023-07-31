@@ -1,26 +1,39 @@
 import React, { useEffect, useState } from "react";
-import me from "../assets/images/result.png";
+import me from "../assets/images/result2.png";
 
 const Hero = () => {
-  const handleBotClick = () => {
-    const connectSection = document.getElementById("connect");
-    if (connectSection) {
-      connectSection.scrollIntoView({ behavior: "smooth" });
+  const [currentSubtitle, setCurrentSubtitle] = useState("");
+  const subtitles = [
+    "Software Engineer",
+    "Fullstack Developer",
+    "Tech Enthusiast",
+    "Swimmer",
+  ];
+
+  const typeSubtitle = (text, index, delay = 100) => {
+    if (index <= text.length) {
+      setCurrentSubtitle(text.substring(0, index));
+      setTimeout(() => typeSubtitle(text, index + 1, delay), delay);
+    } else {
+      setTimeout(() => eraseSubtitle(text, index - 1, delay), 1000);
     }
   };
 
-  const handleLinkedInClick = () => {
-    window.open(
-      "https://www.linkedin.com/in/saumitra-pathak-b32289215/",
-      "_blank"
-    );
+  const eraseSubtitle = (text, index, delay = 50) => {
+    if (index >= 0) {
+      setCurrentSubtitle(text.substring(0, index));
+      setTimeout(() => eraseSubtitle(text, index - 1, delay), delay);
+    } else {
+      const nextSubtitleIndex =
+        (subtitles.indexOf(text) + 1) % subtitles.length;
+      typeSubtitle(subtitles[nextSubtitleIndex], 0);
+    }
   };
 
-  const handleTwitterClick = () => {
-    window.open("https://twitter.com/saumitra_11_", "_blank");
-  };
+  useEffect(() => {
+    typeSubtitle(subtitles[0], 0);
+  }, []);
 
-  const socialMedia = ["logo-linkedin", "logo-twitter"];
   return (
     <section
       id="portal"
@@ -42,21 +55,33 @@ const Hero = () => {
             <br />I am <span>Saumitra Pathak</span>
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            Software Engineer
+            {currentSubtitle || "\u00A0"}{" "}
+            {/* Use placeholder for empty subtitle */}
           </h4>
-          <button className="btn-primary mt-8" onClick={handleBotClick}>
+          <a className="custom-link" href="#connect">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
             Connect With Me
-          </button>
+          </a>
           <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
             <div
               className="text-gray-400 hover:text-white cursor-pointer"
-              onClick={handleLinkedInClick}
+              onClick={() =>
+                window.open(
+                  "https://www.linkedin.com/in/saumitra-pathak-b32289215/",
+                  "_blank"
+                )
+              }
             >
               <ion-icon name="logo-linkedin"></ion-icon>
             </div>
             <div
               className="text-gray-400 hover:text-white cursor-pointer"
-              onClick={handleTwitterClick}
+              onClick={() =>
+                window.open("https://twitter.com/saumitra_11_", "_blank")
+              }
             >
               <ion-icon name="logo-twitter"></ion-icon>
             </div>

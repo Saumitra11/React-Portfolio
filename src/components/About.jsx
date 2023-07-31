@@ -31,12 +31,12 @@ const About = () => {
             <div className="text-gray-300 my-3 ">
               <p className="text-justify leading-7 w-11/12 mx-auto">
                 I am Saumitra Pathak, a Computer Science and Engineering
-                undergrad from VIT Vellore. I
-                interned at <strong>Hewlett Packard Enterprise</strong> from
-                January 2023 to July 2023. I've worked with{" "}
+                undergrad from VIT Vellore. I interned at{" "}
+                <strong>Hewlett Packard Enterprise</strong> from January 2023 to
+                July 2023. I've worked with{" "}
                 <strong>React.js, Node.js, Express.js</strong> and{" "}
                 <strong>Python</strong>. I've also worked with{" "}
-                <strong>C++</strong> and I am an 
+                <strong>C++</strong> and I am an
                 <strong> AWS Certified Cloud Practitioner</strong>. My main goal
                 in my career path is to learn and expand my knowledge domain. I
                 am very much interested in Football and Video Games and I love
@@ -54,8 +54,17 @@ const About = () => {
               </div>{" "}
               <br />
               <br />
-              <a href="./src/assets/Saumitra Pathak's Resume.pdf" download>
-                <button className="btn-primary">My Resume</button>
+              <a
+                className="custom-link"
+                href="./src/assets/Saumitra Pathak's Resume.pdf"
+                download
+              >
+                {/* <button className="btn-primary">My Resume</button> */}
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                My Resume
               </a>
             </div>
           </div>
