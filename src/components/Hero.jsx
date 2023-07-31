@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import me from "../assets/images/result.png";
 
 const Hero = () => {
@@ -12,12 +12,14 @@ const Hero = () => {
         <img
           src={me}
           alt=""
-          className="mx-20 md:w-6/12 md:mt-30 h-90 object-cover"
+          className={`my-10 md:w-6/12 md:mt-30 h-90 object-cover`}
         />
       </div>
       <div className="flex-1">
         <div className="md:text-left text-center">
-          <h1 className="md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold">
+          <h1
+            className={`md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold`}
+          >
             <span className="text-cyan-600 md:text-6xl text-5xl">Hello!</span>
             <br />I am <span>Saumitra Pathak </span>
           </h1>

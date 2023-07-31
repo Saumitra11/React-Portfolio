@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between ">
         <div className="mx-7">
           <h4 className="text-4xl uppercase font-bold ">
-            Sau<span className="text-cyan-600">mit</span>ra
+            Sau<span className="text-cyan-600">mi</span>tra
           </h4>
         </div>
         <div className="text-gray-300 md:block hidden px-7 py-2 font-medium bg-gray-900 rounded-bl-full">
