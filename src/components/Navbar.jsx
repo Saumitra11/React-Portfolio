@@ -71,7 +71,7 @@ const Navbar = () => {
           <ion-icon name="menu"></ion-icon>
         </div>
         <div
-          className={`md:hidden text-gray-900 absolute w-1/3 h-screen px-7 py-2 font-medium bg-white top-0 duration-300 ${
+          className={`md:hidden text-gray-900 absolute w-2/3 h-screen px-7 py-2 font-medium bg-white top-0 duration-300 ${
             open ? "right-0" : "right-[-100%]"
           }`}
         >

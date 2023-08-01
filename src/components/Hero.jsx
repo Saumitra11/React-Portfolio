@@ -43,7 +43,7 @@ const Hero = () => {
         <img
           src={me}
           alt=""
-          className={`my-10 md:w-6/12 md:mt-30 h-90 object-cover`}
+          className={`my-10 md:w-6/12 w-6/12 object-cover md:h-90`}
         />
       </div>
       <div className="flex-1">
@@ -56,7 +56,6 @@ const Hero = () => {
           </h1>
           <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
             {currentSubtitle || "\u00A0"}{" "}
-            {/* Use placeholder for empty subtitle */}
           </h4>
           <a className="custom-link" href="#connect">
             <span></span>

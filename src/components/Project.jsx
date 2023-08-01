@@ -24,24 +24,23 @@ const Project = () => {
           <p className="text-gray-400 mt-3 text-lg opacity-0">Works</p>
         </div>
         <br />
-        <div className="flex max-w-6xl px-5 mx-auto items-center relative">
-          <div className="lg:w-3/3 w-full">
+        <div className="flex lg:max-w-6xl max-w-sm gap-6 px-5 mx-auto items-center relative">
+          <div className="w-full">
             <Swiper
               slidesPerView={1}
               spaceBetween={20}
-              loop={true}
+              centeredSlides={true}
               breakpoints={{
-                400: {
-                  slidesPerView: 1,
-                },
                 768: {
                   slidesPerView: 2,
+                  spaceBetween: 30,
                 },
                 1024: {
                   slidesPerView: 3,
+                  spaceBetween: 40,
                 },
               }}
-              navigation={true}
+              loop={true}
               autoplay={{
                 delay: 3000,
               }}
