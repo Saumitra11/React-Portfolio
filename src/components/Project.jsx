@@ -5,6 +5,7 @@ import uh from "../assets/images/uh.png";
 import k from "../assets/images/k-means.jpg";
 import euro from "../assets/images/euro.png";
 import pc from "../assets/images/pc.png";
+import om from "../assets/images/om.png";
 import emotion from "../assets/images/motion.png";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -55,6 +56,34 @@ const Project = () => {
                   <h3 className="text-xl my-4">
                     Seamless Beta OS Enablement Solution
                   </h3>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
+                  <img
+                    src={om}
+                    alt=""
+                    className="rounded-lg project-image"
+                  />
+                  <h3 className="text-xl my-4">Omnisc.io</h3>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com/Saumitra11/Omnisc.io"
+                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github
+                    </a>
+                    <a
+                      href="https://omnisc-io.vercel.app/"
+                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
