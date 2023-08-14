@@ -56,7 +56,7 @@ const About = () => {
               <br />
               <a
                 className="custom-link"
-                href="./src/assets/Saumitra Pathak (Resume).pdf"
+                href="./src/assets/Resume.pdf"
                 download
               >
                 {/* <button className="btn-primary">My Resume</button> */}
