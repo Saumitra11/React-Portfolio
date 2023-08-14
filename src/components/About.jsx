@@ -56,7 +56,7 @@ const About = () => {
               <br />
               <a
                 className="custom-link"
-                href="https://drive.google.com/file/d/1c2kc4tfzY_pDAmBuo55DwKw6Oi7bJQwm/view?usp=sharing"
+                href="https://drive.google.com/file/d/1cjzT3d0-JlpjYX-DZLUc5aCfuyvTCJFL/view?usp=sharing"
                 target="_blank"
               >
                 {/* <button className="btn-primary">My Resume</button> */}
