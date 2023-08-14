@@ -54,11 +54,7 @@ const About = () => {
               </div>{" "}
               <br />
               <br />
-              <a
-                className="custom-link"
-                href="./src/assets/Resume.pdf"
-                download
-              >
+              <a className="custom-link" href="src\assets\Resume.pdf" download>
                 {/* <button className="btn-primary">My Resume</button> */}
                 <span></span>
                 <span></span>
