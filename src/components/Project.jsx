@@ -60,11 +60,7 @@ const Project = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img
-                    src={om}
-                    alt=""
-                    className="rounded-lg project-image"
-                  />
+                  <img src={om} alt="" className="rounded-lg project-image" />
                   <h3 className="text-xl my-4">Omnisc.io</h3>
                   <div className="flex gap-3">
                     <a
@@ -92,7 +88,7 @@ const Project = () => {
                   <h3 className="text-xl my-4">UrbanHabitats</h3>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com/Saumitra11/UrbanHabitatsFrontend"
+                      href="https://github.com/Saumitra11/UrbanHabitats"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -100,7 +96,7 @@ const Project = () => {
                       Github
                     </a>
                     <a
-                      href="https://urban-habitats-page.pages.dev/"
+                      href="https://urban-habitats-1-nine.vercel.app/"
                       className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
                       target="_blank"
                       rel="noopener noreferrer"
