@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import me from "../assets/images/result2.png";
+import me2 from "../assets/images/me-lol.png"
 
 const Hero = () => {
   const [currentSubtitle, setCurrentSubtitle] = useState("");
   const subtitles = [
-    "Software Engineer",
-    "Fullstack Developer",
+    "Cloud Developer @ Hewlett Packard Enterprise",
     "Tech Enthusiast",
     "Swimmer",
   ];
@@ -41,9 +41,9 @@ const Hero = () => {
     >
       <div className="flex-1 flex items-center justify-center h-full">
         <img
-          src={me}
+          src={me2}
           alt=""
-          className={`my-10 md:w-6/12 w-6/12 object-cover md:h-90`}
+          className={`my-10 md:w-9/12 w-6/12 object-cover md:h-90`}
         />
       </div>
       <div className="flex-1">

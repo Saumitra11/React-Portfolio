@@ -9,6 +9,12 @@ const Skills = () => {
       count: 90,
     },
     {
+      logo: "logo-python",
+      language: "Python",
+      level: "Advance",
+      count: 85,
+    },
+    {
       logo: "logo-javascript",
       language: "JavaScript",
       level: "Intermediate",
@@ -18,13 +24,7 @@ const Skills = () => {
       logo: "logo-react",
       language: "React.js",
       level: "Intermediate",
-      count: 50,
-    },
-    {
-      logo: "logo-python",
-      language: "Python",
-      level: "Beginner",
-      count: 32,
+      count: 60,
     },
   ];
   return (

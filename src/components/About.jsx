@@ -35,7 +35,7 @@ const About = () => {
                 <strong>Hewlett Packard Enterprise</strong> from January 2023 to
                 July 2023. I've worked with{" "}
                 <strong>React.js, Node.js, Express.js</strong> and{" "}
-                <strong>Python</strong>. I've also worked with{" "}
+                <strong>Python</strong>. I now work in <strong>HPE</strong> as a <strong>Cloud Developer</strong>. I've also worked with{" "}
                 <strong>C++</strong> and I am an
                 <strong> AWS Certified Cloud Practitioner</strong>. My main goal
                 in my career path is to learn and expand my knowledge domain. I
