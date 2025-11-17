@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import me from "../assets/images/result2.png";
-import me2 from "../assets/images/me-lol.png"
 
 const Hero = () => {
   const [currentSubtitle, setCurrentSubtitle] = useState("");
+
   const subtitles = [
-    "Cloud Developer @ Hewlett Packard Enterprise",
+    "Cloud Developer @ HPE",
+    "Backend & Automation Engineer",
     "Tech Enthusiast",
-    "Swimmer",
   ];
 
-  const typeSubtitle = (text, index, delay = 100) => {
+  // typing animation
+  const typeSubtitle = (text, index, delay = 70) => {
     if (index <= text.length) {
       setCurrentSubtitle(text.substring(0, index));
       setTimeout(() => typeSubtitle(text, index + 1, delay), delay);
@@ -19,14 +19,13 @@ const Hero = () => {
     }
   };
 
-  const eraseSubtitle = (text, index, delay = 50) => {
+  const eraseSubtitle = (text, index, delay = 40) => {
     if (index >= 0) {
       setCurrentSubtitle(text.substring(0, index));
       setTimeout(() => eraseSubtitle(text, index - 1, delay), delay);
     } else {
-      const nextSubtitleIndex =
-        (subtitles.indexOf(text) + 1) % subtitles.length;
-      typeSubtitle(subtitles[nextSubtitleIndex], 0);
+      const next = (subtitles.indexOf(text) + 1) % subtitles.length;
+      typeSubtitle(subtitles[next], 0);
     }
   };
 
@@ -37,53 +36,50 @@ const Hero = () => {
   return (
     <section
       id="portal"
-      className="min-h-screen flex py-10 md:flex-row flex-col items-center"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 pb-10"
     >
-      <div className="flex-1 flex items-center justify-center h-full">
-        <img
-          src={me2}
-          alt=""
-          className={`my-10 md:w-9/12 w-6/12 object-cover md:h-90`}
-        />
-      </div>
-      <div className="flex-1">
-        <div className="md:text-left text-center">
-          <h1
-            className={`md:text-5xl text-2xl md:leading-normal leading-10 text-white font-bold`}
+      <div className="animate-fade-in-up max-w-3xl">
+        {/* MAIN HEADER */}
+        <h1 className="text-white font-bold md:text-6xl text-4xl leading-[1.3] md:leading-[1.25]">
+          <span className="text-cyan-600 block mb-2">Hello!</span>I am{" "}
+          <span>Saumitra Pathak</span>
+        </h1>
+
+        {/* SUBTITLE */}
+        <h4 className="md:text-2xl text-xl mt-6 font-semibold text-gray-400 h-8 animate-fade-in">
+          {currentSubtitle || "\u00A0"}
+        </h4>
+
+        {/* CTA BUTTON */}
+        <a href="#connect" className="custom-link inline-block mt-10">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          Connect With Me
+        </a>
+
+        {/* SOCIAL ICONS */}
+        <div className="mt-12 text-3xl flex items-center justify-center gap-8 animate-fade-in-delayed">
+          <div
+            className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/saumitra-pathak-b32289215/",
+                "_blank",
+              )
+            }
           >
-            <span className="text-cyan-600 md:text-6xl text-5xl">Hello!</span>
-            <br />I am <span>Saumitra Pathak</span>
-          </h1>
-          <h4 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600">
-            {currentSubtitle || "\u00A0"}{" "}
-          </h4>
-          <a className="custom-link" href="#connect">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Connect With Me
-          </a>
-          <div className="mt-8 text-3xl flex items-center md:justify-start justify-center gap-5">
-            <div
-              className="text-gray-400 hover:text-white cursor-pointer"
-              onClick={() =>
-                window.open(
-                  "https://www.linkedin.com/in/saumitra-pathak-b32289215/",
-                  "_blank"
-                )
-              }
-            >
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </div>
-            <div
-              className="text-gray-400 hover:text-white cursor-pointer"
-              onClick={() =>
-                window.open("https://twitter.com/saumitra_11_", "_blank")
-              }
-            >
-              <ion-icon name="logo-twitter"></ion-icon>
-            </div>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </div>
+
+          <div
+            className="text-gray-400 hover:text-white cursor-pointer transition-all duration-300"
+            onClick={() =>
+              window.open("https://twitter.com/saumitra_11_", "_blank")
+            }
+          >
+            <ion-icon name="logo-twitter"></ion-icon>
           </div>
         </div>
       </div>

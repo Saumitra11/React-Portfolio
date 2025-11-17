@@ -1,190 +1,177 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import hpe from "../assets/images/hpe.png";
-import uh from "../assets/images/uh.png";
-import k from "../assets/images/k-means.jpg";
-import euro from "../assets/images/euro.png";
-import pc from "../assets/images/pc.png";
-import om from "../assets/images/om.png";
-import emotion from "../assets/images/motion.png";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Project = () => {
+  const projects = [
+    {
+      title: "Wanderly",
+      desc: "A visual travel discovery app that shows real images, hotels, and nearby attractions using Google Places API.",
+      tech: ["React", "Tailwind", "Google Places API"],
+      links: [
+        { text: "GitHub", href: "https://github.com/Saumitra11/Wanderly" },
+        { text: "Live Demo", href: "https://wanderly-umber.vercel.app/" },
+      ],
+    },
+
+    {
+      title: "UrbanHabitats",
+      desc: "Real estate discovery platform with search filters, listings, and modern card UI.",
+      tech: ["React", "Node", "Express", "MongoDB"],
+      links: [
+        { text: "GitHub", href: "https://github.com/Saumitra11/UrbanHabitats" },
+        {
+          text: "Live Demo",
+          href: "https://urban-habitats-1-nine.vercel.app/",
+        },
+      ],
+    },
+    {
+      title: "K-Means Coloring",
+      desc: "Extract dominant colors from images using K-Means clustering.",
+      tech: ["Python", "OpenCV", "NumPy"],
+      links: [
+        {
+          text: "GitHub",
+          href: "https://github.com/Saumitra11/K-Dominant-Colors",
+        },
+      ],
+    },
+    {
+      title: "PlayCave",
+      desc: "Multiplayer game portal with user profiles, room system and animations.",
+      tech: ["React", "Firebase", "Node"],
+      links: [
+        { text: "GitHub", href: "https://github.com/maurya-goyal10/playCave" },
+      ],
+    },
+    {
+      title: "Euro 2020 Analysis",
+      desc: "Football match analysis with data cleaning, visualization and insights.",
+      tech: ["Python", "Pandas", "Matplotlib"],
+      links: [
+        {
+          text: "GitHub",
+          href: "https://github.com/Saumitra11/Football-Game-Analysis",
+        },
+      ],
+    },
+    {
+      title: "Emotion Detection",
+      desc: "Facial emotion recognition using CNNs with a working web demo.",
+      tech: ["Python", "TensorFlow", "OpenCV"],
+      links: [
+        {
+          text: "GitHub",
+          href: "https://github.com/Saumitra11/Emotion-Detector",
+        },
+        {
+          text: "Live Demo",
+          href: "https://saumitra11.github.io/Emotion-Detector/",
+        },
+      ],
+    },
+  ];
+
   return (
     <section
       id="works"
-      className="min-h-screen py-10 text-gray-300 flex items-center justify-center"
+      className="min-h-screen py-16 text-gray-300 flex items-center justify-center"
     >
-      <div>
-        <div className="text-center">
-          <h3 className="text-4xl font-bold mt-10">
+      <div className="w-full max-w-6xl px-6">
+        {/* Title */}
+        <div className="text-center mb-12">
+          <h3 className="text-4xl font-bold">
             My <span className="text-cyan-600">Works</span>
           </h3>
-          <p className="text-gray-400 mt-3 text-lg opacity-0">Works</p>
+          <p className="text-gray-400 mt-3">
+            A collection of the projects I've built across Web, ML and Cloud.
+          </p>
         </div>
-        <br />
-        <div className="flex lg:max-w-6xl max-w-sm gap-6 px-5 mx-auto items-center relative">
-          <div className="w-full">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={20}
-              centeredSlides={true}
-              breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
-              }}
-              loop={true}
-              autoplay={{
-                delay: 3000,
-              }}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination, Autoplay, Navigation]}
-            >
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={hpe} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">
-                    Seamless Beta OS Enablement Solution
+
+        {/* Swiper */}
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={30}
+          centeredSlides={true}
+          loop={true}
+          loopAdditionalSlides={10}
+          loopFillGroupWithBlank={false}
+          slidesPerGroup={1}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          speed={900}
+          freeMode={true}
+          freeModeMomentum={true}
+          freeModeMomentumRatio={0.4}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+          modules={[Pagination, Autoplay]}
+          className="pb-14"
+        >
+          {projects.map((p, i) => (
+            <SwiperSlide key={i}>
+              <div
+                className="
+                bg-gray-800/80
+                border border-gray-700
+                rounded-3xl
+                p-8
+                h-72
+                shadow-xl
+                hover:shadow-cyan-600/30
+                transition-all
+                duration-300
+                backdrop-blur-xl
+                flex flex-col
+                justify-between
+              "
+              >
+                {/* Title + Description */}
+                <div>
+                  <h3 className="text-xl font-semibold text-white">
+                    {p.title}
                   </h3>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={om} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">Omnisc.io</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/Saumitra11/Omnisc.io"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                    <a
-                      href="https://omnisc-io.vercel.app/"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
+                  <p className="text-sm text-gray-400 mt-2">{p.desc}</p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    {p.tech.map((t, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-[2px] bg-gray-900 text-gray-300 text-xs rounded-md border border-gray-700"
+                      >
+                        {t}
+                      </span>
+                    ))}
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={uh} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">UrbanHabitats</h3>
-                  <div className="flex gap-3">
+
+                {/* Buttons */}
+                <div className="flex gap-3 mt-4 flex-wrap">
+                  {p.links.map((link, j) => (
                     <a
-                      href="https://github.com/Saumitra11/UrbanHabitats"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
+                      key={j}
+                      href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
+                      className="px-3 py-1 rounded-md text-sm text-cyan-400 bg-gray-900 border border-cyan-700 hover:bg-cyan-700 hover:text-black transition-all"
                     >
-                      Github
+                      {link.text}
                     </a>
-                    <a
-                      href="https://urban-habitats-1-nine.vercel.app/"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                  </div>
+                  ))}
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={k} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">K Means Coloring</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/Saumitra11/K-Dominant-Colors"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={pc} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">PlayCave</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/maurya-goyal10/playCave"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img src={euro} alt="" className="rounded-lg project-image" />
-                  <h3 className="text-xl my-4">Euro 2020 Knockout Analysis</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/Saumitra11/Football-Game-Analysis"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="h-fit w-full p-4 bg-slate-700 rounded-xl">
-                  <img
-                    src={emotion}
-                    alt=""
-                    className="rounded-lg project-image"
-                  />
-                  <h3 className="text-xl my-4">Emotion Detection</h3>
-                  <div className="flex gap-3">
-                    <a
-                      href="https://github.com/Saumitra11/Emotion-Detector"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Github
-                    </a>
-                    <a
-                      href="https://saumitra11.github.io/Emotion-Detector/"
-                      className="text-cyan-600 bg-gray-800 px-2 py-1 inline-block"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Live Demo
-                    </a>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   );
